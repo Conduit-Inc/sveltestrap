@@ -1,7 +1,7 @@
 {
   "name": "@sveltestrap/sveltestrap",
   "description": "Bootstrap components for Svelte",
-  "version": "7.0.3-conduit-fork-1.0.2",
+  "version": "7.0.3-conduit-fork-1.0.3",
   "license": "MIT",
   "homepage": "https://sveltestrap.js.org",
   "repository": {
@@ -53,10 +53,10 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "start": "pnpm build && storybook dev -p 6006",
-    "build": "svelte-package --input ./src && pnpm lint:package",
+    "start": "npm build && storybook dev -p 6006",
+    "build": "svelte-package --input ./src && npm lint:package",
     "docs:build": "storybook build -o docs && cp -r ./.storybook/docs/* ./docs",
-    "docs:deploy": "pnpm run docs:build && npx gh-pages -d docs",
+    "docs:deploy": "npm run docs:build && npx gh-pages -d docs",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint -c ./.eslintrc.json --fix \"{tests/app/src,src}/**/*.{js,ts,json,svelte}\"",
     "lint:package": "publint --strict",
@@ -64,8 +64,8 @@
     "test": "vitest --run --coverage",
     "test:watch": "vitest",
     "test:coverage": "vitest --run --coverage && open ./coverage/index.html",
-    "test:integration": "pnpm --prefix ./tests/app install && npx playwright test",
-    "test:integration:report": "pnpm test:integration && npx playwright show-report"
+    "test:integration": "npm --prefix ./tests/app install && npx playwright test",
+    "test:integration:report": "npm test:integration && npx playwright show-report"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",
