@@ -1,7 +1,7 @@
 {
   "name": "@sveltestrap/sveltestrap",
   "description": "Bootstrap components for Svelte",
-  "version": "7.0.3-conduit-fork-1.0.4",
+  "version": "7.0.3-conduit-fork-1.0.5",
   "license": "MIT",
   "homepage": "https://sveltestrap.js.org",
   "repository": {
@@ -52,7 +52,6 @@
     "tooltips"
   ],
   "scripts": {
-    "prepare": "npm run build",
     "start": "pnpm build && storybook dev -p 6006",
     "build": "svelte-package --input ./src && pnpm lint:package",
     "docs:build": "storybook build -o docs && cp -r ./.storybook/docs/* ./docs",
@@ -113,8 +112,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "pnpm": "^9.15.4"
+    "@popperjs/core": "^2.11.8"
   },
   "peerDependencies": {
     "svelte": "^4.0.0 || ^5.0.0 || ^5.0.0-next.0"
